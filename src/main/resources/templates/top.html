@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form method="post" action="/" th:object="${formModel}">
+<h1>原神キャラ育成アイテムチェッカー</h1>
+<labeL>レベル</labeL><input type="text" name="level">
+<labeL>欠片</labeL><input type="text" name="kakera">
+<labeL>コア</labeL><input type="text" name="core">
+<label>特産</label><input type="text" name="tokusan">
+<label>ドロップアイテム</label><input type="text" name="drop">
+<input type="submit" value="計算">
+</form>
+<h1>アイテム必要数</h1>
+<table>
+<tr><th>欠片</th><th>コア</th><th>特産
+</th><th>ドロップアイテム</th></tr>
+<tr><td th:text="${kakera}"></td>
+<td th:text="${core}"></td>
+<td th:text="${tokusan}"></td>
+<td th:text="${drop}"></td>
+</tr>
+</table>
+
+</body>
+</html>
